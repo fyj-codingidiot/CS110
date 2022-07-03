@@ -1,0 +1,15 @@
+1.t0
+
+2.source:t4 dest:t6
+
+3.loop:
+	slli t3, t0, 2
+	add t4, t1, t3
+	lw t5, 0(t4)
+	beq t5, x0, exit
+	add t6, t2, t3
+	sw t5, 0(t6)
+	addi t0, t0, 1
+	jal x0, loop
+	
+4.首先获得数组的基址（对于source是t1，对于dest是t2），然后因为int型的大小是4个byte，所以对于循环变量i，在其基础上乘4（即左移两位）在加到数组的基址上，就可以得到数组每个元素对应的地址了

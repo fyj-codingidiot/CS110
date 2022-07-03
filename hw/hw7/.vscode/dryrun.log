@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/fyj/桌面/C/CS110/hw/hw7'
+g++ -Wpedantic -Wall -Wextra -std=c++14 -g -o main main.cpp
+make: Leaving directory '/home/fyj/桌面/C/CS110/hw/hw7'
+ 
